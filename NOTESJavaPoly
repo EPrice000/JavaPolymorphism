@@ -1,0 +1,62 @@
+POLYMORPHISM:
+
+public class food {
+
+
+
+}
+
+Polymorphism uses inheritance.
+class apples {
+  public static void main(String[] args) {
+  //Now to the polymorphism
+  //
+  /*tuna bucky = new tuna();
+  food bucky = new tuna();*/
+  
+  //intro to polymorphism.
+  //not only is tuna pf tuna type but it is also of the food type.
+  //anything that inherits from the superclass Food can be assiged to bucky.
+  //tuna senses inheritances since this inherits from food can be assigned to it Bucky.
+  //Potpie senses inheritance from food can be assigned to bucky
+  //so now you can assign this and that to the other but why?
+  //best example to this:
+  
+  
+   //polymorphic array. and this stored objects of different classes in the superclass type.
+   //since we have something of the food type it can hold objects of tuna and potpie.
+   food bucky[]=new food[2];//we have a total of two foods
+   bucky[0] = new potpie();//this variable can hold an object
+   bucky[1] = new tuna();//and another variable that can hold an object.
+   //Whats the usefullness?
+   //one reason to use poylmorphism is to create polymorphic arrays.
+   //example:
+   
+   for (int x = 0;x<2;++x){
+     bucky[x].eat();//this loops through each one of these objects and call the eat method
+   }
+  }
+}
+
+public class food {
+//methods and variables go in the superclass file. Parent class.
+  void eat() {
+    System.out.println("This food is great!");
+  
+  }
+
+//any time this eat method is called in tuna or potpie. The print line statement runs.
+
+}
+public class tuna extends food {
+  //subclass (CHILD) of food (PARENT)
+  //You can overwrite the eat() method in the FOOD file, example:
+  void eat() {
+  System.out.println("This tuna is great");
+  }
+
+}
+This actually loops through your objects from different classes.
+
+These are just the basics of polymorphism.
+As long as the reference variable (bucky) is of the superclass type in that way instead of building a new object for each of your food types (tuna, potpie). You can build one reference variable of a superclass and assign it to the object of the subclasses. SUPER COOL!!!!!!!
